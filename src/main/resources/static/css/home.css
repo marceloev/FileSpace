@@ -1,0 +1,12 @@
+.box-aligned {right: 0; text-align: center;}
+
+.box-aligned .left, .container .center, .container .right { display: inline-block; }
+
+.box-aligned .left { float: left; }
+.box-aligned .center { margin: 0 auto; }
+.box-aligned .right { float: right; }
+.clear { clear: both; }
+
+.box-aligned .box-perfil {
+    background-color: WhiteSmoke;
+}
