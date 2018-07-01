@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -13,42 +12,8 @@
 </head>
 <body>
 <form th:action="@{/cadastrar}" method="POST" th:object="${user}">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <a class="navbar-brand" href="#">
-                    <u>
-                        FileSpace
-                    </u>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Palavras chaves são ' ' ou '*'"
-                           align="center" style="width: 400px;">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-                </form>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarToggleExternalContent"
-                        aria-controls="navbarToggleExternalContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </ul>
-            <form class="form-inline my-2 my-lg-0" action="/logout" method="get">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-    <footer>
-        <a>Criado por: Marcelo Domingues</a>
-        <p>Bug's ou sugestão de desenvolvimento?
-            <a href="mailto:marcelo.domingues@sankhya.com.br">
-                marcelo.domingues@sankhya.com.br</a>
-        </p>
-    </footer>
+    <header th:insert="fragments/general.html :: header"/>
+    <footer th:insert="fragments/general.html :: footer"/>
 </form>
 </body>
 </html>
